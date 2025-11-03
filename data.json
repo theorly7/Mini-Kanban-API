@@ -1,0 +1,29 @@
+{
+  "boards": [
+    {
+      "id": 1,
+      "name": "Things to do"
+    },
+    {
+      "id": 2,
+      "name": "Things to do"
+    }
+  ],
+  "lists": [
+    {
+      "id": 1,
+      "board_id": 1,
+      "name": "To Do"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "list_id": 1,
+      "title": "Create Web Service Development (Flask / FastAPI) - Mini Kanban API",
+      "description": "In this assignment, you will design and implement a small web service or API server using Python with either Flask or FastAPI.\nThe goal is to apply your Python programming skills to build a functional backend application with a clear structure, input validation, and simple persistent storage using only the Python standard library (e.g., json, csv, difflib, os).\nYou may work individually or in groups of 2–3 students.\nWorking in a team is encouraged, as it allows for task distribution (e.g., backend logic, testing, documentation) and better project planning. If working in a group, make sure to document team roles in your README.md.\nAll data must be stored without external databases.\nOnly in-memory structures or files (JSON/CSV/plain text) are allowed.\nNo external Python packages or frameworks may be used beyond Flask or FastAPI.\nAt the end of the project, each team must provide:\n- A working web service with a set of clearly defined endpoints\n- A short README.md with installation instructions, API description, and team member roles\nGoal: Manage boards, lists, and cards.\nData: In-memory structures; optional JSON dump to file on shutdown.\n- Endpoints: create/list boards; add lists to a board; CRUD cards; move card between lists.\n- Filters: list cards by status/assignee (query params).\n- Auth: header X-API-Key.",
+      "assignee": "Arseniy",
+      "status": "todo"
+    }
+  ]
+}
