@@ -105,7 +105,7 @@ curl http://localhost:8000/health
 ### Создать доску
 ```bash
 curl -X POST http://localhost:8000/boards \
-  -H "x-api-key: my_secret_api_key_123" \
+  -H "x-api-key: test_authorization_key" \
   -H "Content-Type: application/json" \
   -d '{"name": "Моя доска"}'
 ```
@@ -113,7 +113,7 @@ curl -X POST http://localhost:8000/boards \
 ### Создать список
 ```bash
 curl -X POST http://localhost:8000/lists \
-  -H "x-api-key: my_secret_api_key_123" \
+  -H "x-api-key: test_authorization_key" \
   -H "Content-Type: application/json" \
   -d '{"board_id": 1, "name": "В работе"}'
 ```
@@ -121,7 +121,7 @@ curl -X POST http://localhost:8000/lists \
 ### Создать карточку
 ```bash
 curl -X POST http://localhost:8000/cards \
-  -H "x-api-key: my_secret_api_key_123" \
+  -H "x-api-key: test_authorization_key" \
   -H "Content-Type: application/json" \
   -d '{
     "list_id": 1,
