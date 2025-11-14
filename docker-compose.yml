@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: kanbanuser
+      POSTGRES_PASSWORD: kanbanpass
+      POSTGRES_DB: kanbandb
+    ports:
+      - "5432:5432"
+    volumes:
+      - kanban_dbdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: kanbanuser
+      DB_PASSWORD: kanbanpass
+      DB_NAME: kanbandb
+      API_KEY: "test_authorization_key"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    restart: on-failure
+
+volumes:
+  kanban_dbdata:
